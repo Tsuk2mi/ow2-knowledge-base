@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="守望先锋 2 竞技学研究知识库。检索原创体系、WizardHyeong 与他山之玉的理论、术语、来源和关系，理解资源、窗口、节奏与团队行动。">
+  <meta name="theme-color" content="#f5f1e9">
+  <meta property="og:title" content="守望先锋 2 竞技学总知识库">
+  <meta property="og:description" content="从一个概念，找到机制、条件、来源和它所连接的知识。">
+  <title>守望先锋 2 竞技学总知识库</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./platform.css">
+  <script src="./app.js" defer></script>
+</head>
+<body class="knowledge-site">
+  <a class="skip-link" href="#app">跳到正文</a>
+  <header class="platform-header" aria-label="守望先锋竞技学网站群">
+    <div class="platform-header-inner">
+      <a class="platform-brand" href="#/" aria-label="守望先锋竞技学知识库主门户"><span class="platform-mark" aria-hidden="true">竞</span><span class="platform-brand-name">守望先锋竞技学<span class="platform-brand-en">OVERWATCH COMPETITIVE STUDIES</span></span></a>
+      <nav class="platform-nav" aria-label="网站群导航"><a href="https://tsuk2mi.github.io/overwatch-competitive-studies/"><span class="platform-nav-number">01</span>竞技学宝典 <span class="platform-link-arrow" aria-hidden="true">↗</span></a><a href="https://tsuk2mi.github.io/ow-theory/"><span class="platform-nav-number">02</span>Wizard 视频摘要 <span class="platform-link-arrow" aria-hidden="true">↗</span></a><a href="#/" aria-current="page"><span class="platform-nav-number">03</span>竞技学知识库</a></nav>
+      <details class="platform-menu"><summary>网站群</summary><nav aria-label="移动网站群导航"><a href="https://tsuk2mi.github.io/overwatch-competitive-studies/"><span class="platform-nav-number">01</span>竞技学宝典 <span class="platform-link-arrow" aria-hidden="true">↗</span></a><a href="https://tsuk2mi.github.io/ow-theory/"><span class="platform-nav-number">02</span>Wizard 视频摘要 <span class="platform-link-arrow" aria-hidden="true">↗</span></a><a href="#/" aria-current="page"><span class="platform-nav-number">03</span>竞技学知识库</a></nav></details>
+    </div>
+  </header>
+  <button id="menu-overlay" class="menu-overlay" aria-label="关闭导航" hidden></button>
+  <aside id="sidebar" class="sidebar" aria-label="知识库导航">
+    <a href="#/" class="brand" aria-label="竞技学知识库首页">
+      <svg viewBox="0 0 40 40" width="36" height="36" aria-hidden="true"><path d="M6 30V12l14-7 14 7v18l-14 7z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m6 12 14 8 14-8M20 20v17" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="20" cy="20" r="3" fill="var(--platform-accent)"/></svg>
+      <span class="brand-text">知识库<span class="brand-sub">OVERWATCH STUDIES</span></span>
+    </a>
+    <div class="library-label">守望先锋 2 · 研究知识库</div>
+    <nav>
+      <div class="nav-group"><span class="nav-caption">浏览知识</span>
+        <a class="nav-link" data-section="home" href="#/"><span class="nav-symbol">⌂</span>总览</a>
+        <a class="nav-link" data-section="nodes" href="#/nodes"><span class="nav-symbol">≡</span>全部知识</a>
+        <a class="nav-link" data-section="map" href="#/map"><span class="nav-symbol">◇</span>理论地图</a>
+        <a class="nav-link" data-section="glossary" href="#/glossary"><span class="nav-symbol">Aa</span>战术术语</a>
+      </div>
+      <div class="nav-group"><span class="nav-caption">按来源进入</span>
+        <a class="nav-link" data-section="original" href="#/nodes?collection=原创体系"><span class="source-dot original-dot"></span>原创竞技学体系</a>
+        <a class="nav-link" data-section="wizard" href="#/nodes?collection=Wizard"><span class="source-dot wizard-dot"></span>Wizard 理论</a>
+        <a class="nav-link" data-section="external" href="#/nodes?collection=他山之玉"><span class="source-dot external-dot"></span>他山之玉</a>
+        <a class="nav-link" data-section="sources" href="#/sources"><span class="nav-symbol">↗</span>来源索引</a>
+      </div>
+      <div class="nav-group"><span class="nav-caption">研究与教学</span>
+        <a class="nav-link" data-section="comparison" href="#/docs/comparison">观点对照</a>
+        <a class="nav-link" data-section="backlog" href="#/docs/backlog">知识缺口</a>
+        <a class="nav-link" data-section="courses" href="#/docs/courses">课程候选</a>
+      </div>
+    </nav>
+    <div class="nav-group platform-sidebar-nav"><span class="nav-caption">竞技学平台</span><a class="nav-link" href="https://tsuk2mi.github.io/overwatch-competitive-studies/">竞技学宝典 <span aria-hidden="true">↗</span></a><a class="nav-link" href="https://tsuk2mi.github.io/ow-theory/">Wizard 视频摘要 <span aria-hidden="true">↗</span></a></div>
+    <div class="sidebar-foot"><span class="edition-mark">研究版</span><p>从概念到机制<br>从机制到行动</p><span id="site-counts" class="sidebar-counts">正在载入知识索引</span></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <div class="topbar-left"><button id="menu-toggle" class="menu-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="打开导航"><span></span><span></span><span></span></button><span class="topbar-title">竞技学总知识库</span><span class="topbar-edition">PUBLIC RESEARCH EDITION</span></div>
+      <form id="global-search" class="global-search" role="search"><label class="sr-only" for="global-query">搜索整个知识库</label><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="global-query" name="q" type="search" placeholder="搜索概念、英文或节点编号" autocomplete="off"><button type="submit" aria-label="搜索">↵</button></form>
+    </header>
+    <main id="app" tabindex="-1" aria-live="polite"><div class="loading-state"><span class="loading-dot"></span>正在打开知识库…</div></main>
+    <footer class="site-footer platform-footer"><div><span class="platform-footer-brand">守望先锋竞技学 · 知识库</span><p class="platform-footer-note">研究数据库 · 理论状态与出处随条目保留</p></div><nav class="platform-footer-nav" aria-label="页脚网站群导航"><a href="https://tsuk2mi.github.io/overwatch-competitive-studies/"><span class="platform-nav-number">01</span>竞技学宝典 <span class="platform-link-arrow" aria-hidden="true">↗</span></a><a href="https://tsuk2mi.github.io/ow-theory/"><span class="platform-nav-number">02</span>Wizard 视频摘要 <span class="platform-link-arrow" aria-hidden="true">↗</span></a><a href="#/" aria-current="page"><span class="platform-nav-number">03</span>竞技学知识库</a></nav></footer>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <noscript><p class="no-script">请启用 JavaScript，以使用知识检索和交叉浏览。</p></noscript>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* 守望先锋竞技学 · visual foundation from the ONLINE Handbook. */
+@font-face{font-family:'Handbook Serif';src:url('./fonts/editorial-serif.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Handbook Sans';src:url('./fonts/handbook-sans.woff2') format('woff2');font-weight:400;font-display:swap}
+:root{
+ --platform-paper:#f5f1e9;--platform-surface:#faf7f0;--platform-soft:#ede7dc;
+ --platform-ink:#292b29;--platform-muted:#686258;--platform-line:#d4cec1;
+ --platform-accent:#b64928;--platform-accent-soft:#eee0d4;
+ --platform-serif:'Handbook Serif','Songti SC','Noto Serif CJK SC','Source Han Serif SC',SimSun,serif;
+ --platform-sans:'Handbook Sans',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;
+ --platform-mono:'SFMono-Regular',Consolas,'Liberation Mono','Handbook Sans',monospace;
+ --platform-width:1280px;--platform-header-height:105px;--platform-radius:0;
+ --platform-space-1:8px;--platform-space-2:16px;--platform-space-3:24px;--platform-space-4:32px;--platform-space-6:48px;
+}
+.platform-header{position:relative;z-index:70;background:var(--platform-paper);color:var(--platform-ink);font-family:var(--platform-sans)}
+.platform-header-inner{height:var(--platform-header-height);width:min(var(--platform-width),calc(100% - 112px));margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--platform-line)}
+.platform-brand{display:inline-flex;align-items:center;gap:14px;text-decoration:none;color:inherit;flex-shrink:0}
+.platform-mark{display:grid;place-items:center;flex:none;background:var(--platform-accent);color:var(--platform-paper);width:36px;height:42px;font:600 25px/1 var(--platform-serif)}
+.platform-brand-name{font-size:15px;line-height:1.5;font-weight:600;letter-spacing:.02em}
+.platform-brand-en{display:block;font:8px/1.8 var(--platform-mono);letter-spacing:.12em;font-weight:400;color:var(--platform-muted);margin-top:2px}
+.platform-nav{display:flex;align-items:center;gap:30px}
+.platform-nav a,.platform-menu a,.platform-footer-nav a{color:var(--platform-ink);font-size:13px;line-height:1.6;text-decoration:none;padding-block:10px;border-bottom:1px solid transparent;transition:color .15s,border-color .15s;white-space:nowrap}
+.platform-nav a:hover,.platform-menu a:hover,.platform-footer-nav a:hover,.platform-nav a[aria-current],.platform-menu a[aria-current]{color:var(--platform-accent);border-bottom-color:var(--platform-accent)}
+.platform-nav-number{font:9px/1 var(--platform-mono);color:var(--platform-muted);margin-right:6px}.platform-link-arrow{font-size:11px;margin-left:5px}
+.platform-header a:focus-visible,.platform-header summary:focus-visible,.platform-footer a:focus-visible,.platform-entry:focus-visible{outline:2px solid var(--platform-accent);outline-offset:5px}
+.platform-menu{display:none;position:relative}.platform-menu summary{cursor:pointer;list-style:none;font-size:12px;padding:10px 0;color:var(--platform-accent);white-space:nowrap}.platform-menu summary::-webkit-details-marker{display:none}.platform-menu summary::after{content:'＋';margin-left:8px}.platform-menu[open] summary::after{content:'−'}
+.platform-menu nav{position:absolute;top:calc(100% + 14px);right:0;width:248px;display:grid;gap:4px;padding:16px 20px;border:1px solid var(--platform-line);background:var(--platform-paper)}.platform-menu a{display:block;padding-block:12px}
+.platform-footer{font-family:var(--platform-sans);color:var(--platform-muted)}.platform-footer-nav{display:flex;flex-wrap:wrap;gap:12px 24px}.platform-footer-nav a{font-size:11px;padding-block:4px;color:var(--platform-muted)}.platform-footer-brand{font-size:13px;font-weight:600;color:var(--platform-ink)}.platform-footer-note{font-size:11px;line-height:1.8;margin:8px 0 0}
+.platform-return{color:var(--platform-accent);display:inline-flex;align-items:center;gap:8px;font-size:12px;text-decoration:none}.platform-return:hover{text-decoration:underline;text-underline-offset:5px}
+.platform-portals{margin:52px 0 48px}.platform-portals-heading{font:600 29px/1.5 var(--platform-serif);letter-spacing:-.02em;margin:0 0 12px}.platform-portals-lead{margin:0 0 26px;font-size:13px;line-height:1.8;color:var(--platform-muted)}
+.platform-entry-grid{border-top:1px solid var(--platform-ink)}
+.platform-entry{display:grid;grid-template-columns:58px minmax(0,1fr) 136px;gap:10px 24px;align-items:center;padding:26px 0;border-bottom:1px solid var(--platform-line);text-decoration:none;color:var(--platform-ink);min-width:0;transition:background .15s}
+.platform-entry-number{grid-column:1;grid-row:1/3;font:300 37px/1 var(--platform-sans);letter-spacing:-.05em;color:var(--platform-muted);align-self:start;margin-top:4px}.platform-entry h3{grid-column:2;grid-row:1;font:600 24px/1.5 var(--platform-serif);margin:0;letter-spacing:-.02em}.platform-entry p{grid-column:2;grid-row:2;color:var(--platform-muted);font-size:13px;line-height:1.85;margin:0;max-width:650px}.platform-entry-action{grid-column:3;grid-row:1/3;font-size:12px;color:var(--platform-accent);display:flex;align-items:center;justify-content:space-between;gap:16px}.platform-entry-action span:last-child{font-size:23px}.platform-entry:hover{background:#eee8dd}.platform-entry:hover .platform-entry-number,.platform-entry:hover h3{color:var(--platform-accent)}
+@media(min-width:1700px){.platform-header-inner{width:min(1400px,calc(100% - 160px))}}
+@media(max-width:1100px){.platform-header-inner{width:calc(100% - 72px)}.platform-nav{gap:20px}.platform-nav a{font-size:12px}}
+@media(max-width:820px){:root{--platform-header-height:85px}.platform-header-inner{width:calc(100% - 48px)}.platform-nav{display:none}.platform-menu{display:block}}
+@media(max-width:580px){:root{--platform-header-height:80px}.platform-header-inner{width:calc(100% - 40px);gap:14px}.platform-brand{gap:9px}.platform-mark{width:28px;height:34px;font-size:21px}.platform-brand-name{font-size:12px}.platform-brand-en{font-size:6px;letter-spacing:.02em}.platform-menu summary{font-size:11px}.platform-portals{margin:36px 0}.platform-portals-heading{font-size:26px}.platform-entry{grid-template-columns:36px minmax(0,1fr) 20px;gap:8px 13px;padding:24px 0}.platform-entry-number{font-size:28px;margin-top:4px}.platform-entry h3{font-size:21px}.platform-entry p{font-size:12px;grid-column:2/4}.platform-entry-action{grid-row:1;grid-column:3;justify-content:end}.platform-entry-action span:first-child{display:none}.platform-footer-nav{gap:10px 18px}}
+@media print{.platform-header,.platform-footer-nav,.platform-return{display:none}}
+@media(prefers-reduced-motion:reduce){.platform-header *,.platform-portals *{scroll-behavior:auto;transition:none!important}}
